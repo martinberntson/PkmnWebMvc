@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31112.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmnWebApi", "PkmnWebApi\PkmnWebApi.csproj", "{2DE4A5FC-FE06-4894-ACE8-83AE635BE77E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmnOrm", "PkmnOrm\PkmnOrm.csproj", "{1D57380A-E832-49C3-8641-5D6696DB019B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PkmnScraper", "PkmnScraper\PkmnScraper.csproj", "{679741BC-1CD3-4DBA-A6CC-CE50C1AF33F5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DE4A5FC-FE06-4894-ACE8-83AE635BE77E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE4A5FC-FE06-4894-ACE8-83AE635BE77E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE4A5FC-FE06-4894-ACE8-83AE635BE77E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE4A5FC-FE06-4894-ACE8-83AE635BE77E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D57380A-E832-49C3-8641-5D6696DB019B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D57380A-E832-49C3-8641-5D6696DB019B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D57380A-E832-49C3-8641-5D6696DB019B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D57380A-E832-49C3-8641-5D6696DB019B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{679741BC-1CD3-4DBA-A6CC-CE50C1AF33F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{679741BC-1CD3-4DBA-A6CC-CE50C1AF33F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{679741BC-1CD3-4DBA-A6CC-CE50C1AF33F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{679741BC-1CD3-4DBA-A6CC-CE50C1AF33F5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B6865C5D-0E8A-4C03-A06D-D51D6FA83299}
+	EndGlobalSection
+EndGlobal

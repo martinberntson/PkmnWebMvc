@@ -1,0 +1,104 @@
+﻿@model List<PkmnOrm.Models.Pokemon>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Pokémon</h2>
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() > 0)
+    {
+        @if (Model.Count == 1)
+        {
+            <img src="@Url.Content(PkmnWebApi.Controllers.PokemonController.GetPokemonImage(Model[0].Id))" height="500" alt="Picture of @Model[0].Name"/>
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Type?
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td width="20%">@Model[0].Name</td>
+                        <td width="20%">@Model[0].Id</td>
+                        <td width="20%">@PkmnWebApi.Controllers.PokemonController.GetPokemonType(Model[0].Type1)</td>
+                        @if (Model[0].Type2 != null)
+                        {
+                            <td width="20%">
+                                @PkmnWebApi.Controllers.PokemonController.GetPokemonType((int)Model[0].Type2)
+                            </td>
+                        }
+                        else
+                        {
+                            <td width="20%"></td>
+                        }
+
+                    </tr>
+                </tbody>
+            </table>
+
+        }
+        else
+        {
+            <table class="table table-bordered table-striped" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>
+                            Name
+                        </th>
+                        <th>
+                            Id
+                        </th>
+                        <th>
+                            Type
+                        </th>
+                        <th>
+                            Type?
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pkmn in Model)
+                    {
+                    <tr>
+                        <td width="20%"><a href="/Pokemon/@pkmn.Id">@pkmn.Name</a></td>
+                        <td width="20%">@pkmn.Id</td>
+                        <td width="20%">@PkmnWebApi.Controllers.PokemonController.GetPokemonType(pkmn.Type1)</td>
+                        @if (pkmn.Type2 != null)
+                        {
+                            <td width="20%">
+                                @PkmnWebApi.Controllers.PokemonController.GetPokemonType((int)pkmn.Type2)
+                            </td>
+                        }
+                        else
+                        {
+                            <td></td>
+                        }
+                        
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+    else
+    {
+        <p>No Pokemon found.</p>
+    }
+
+
+</div>
